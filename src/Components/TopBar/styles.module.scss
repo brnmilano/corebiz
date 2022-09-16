@@ -7,10 +7,33 @@
 
     & > * {
       flex: 1;
-    }¨
+    }
 
-    .logoImage {
-      max-width: 200px !important;
+    .inputWrapper {
+      display: flex;
+
+      input {
+        min-width: 700px;
+      }
+    }
+
+    .accontCartWrapper {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+
+      button {
+        display: flex;
+
+        .iconUser {
+          margin-right: 5px;
+        }
+
+        svg {
+          font-size: 30px;
+          color: #000000;
+        }
+      }
     }
   }
 }
