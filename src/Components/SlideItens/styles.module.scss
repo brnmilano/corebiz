@@ -1,0 +1,29 @@
+.container {
+    padding-top: 25px;
+    padding-bottom: 60px;
+
+    .titleWrapper {
+        border-bottom: 5px solid #C0C0C0;
+        width: 65px;
+        margin-bottom: 20px;
+    }
+
+    .slides {
+        .swiper-pagination {
+            bottom: 40px;
+        }
+    }
+
+    .itensWrapper {
+        .itemInfo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #e6e8ea;
+            padding: 10px 30px;
+            text-align: center;
+            max-width: 216px;
+        }
+    }
+}
