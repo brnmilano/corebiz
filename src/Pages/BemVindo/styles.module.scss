@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  height: 100vh;
+  background-color: black;
+
+  .logoImage {
+    width: 200px;
+    margin-left: 22px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .buttonWrapper {
+    width: 200px;
+    margin: 0 auto;
+
+    button {
+      text-transform: uppercase;
+
+      &:hover {
+        background-color: #f5b912 !important;
+      }
+    }
+  }
+}
