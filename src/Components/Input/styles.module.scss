@@ -1,0 +1,24 @@
+.input {
+  border-bottom: 1px solid #b6b6b6;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  width: 100px;
+  text-align: center;
+  outline: none;
+  
+  &::placeholder {
+    color: #000000;
+    font-weight: 400;
+  }
+
+  &:active,
+  :focus,
+  :focus-visible {
+    outline: none;
+    background: none;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+  }
+}
