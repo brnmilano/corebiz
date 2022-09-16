@@ -7,7 +7,7 @@ import styles from './styles.module.scss';
  export default function Container ({
   children,
   className,
-  maxWidth = '800px',
+  maxWidth = '1200px',
   style = {},
   overflowHidden = true,
 }) {
