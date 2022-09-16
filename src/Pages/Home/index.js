@@ -1,6 +1,6 @@
 import { Box } from "@mui/system";
 import * as React from "react";
-import Container from "../../Components/Container";
+import Footer from "../../Components/Footer";
 import NewsLatter from "../../Components/NewsLatter";
 import Slide from "../../Components/Slide";
 import SlideItens from "../../Components/SlideItens";
@@ -13,11 +13,11 @@ export default function Home() {
 
       <Slide />
 
-      <Container>
-        <SlideItens />
-      </Container>
-      
+      <SlideItens />
+
       <NewsLatter />
+
+      <Footer />
     </Box>
   );
 }

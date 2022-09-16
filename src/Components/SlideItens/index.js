@@ -1,7 +1,10 @@
 // import Swiper core and required modules
 import { A11y, Navigation, Pagination, Scrollbar } from "swiper";
-
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import { Box } from "@mui/system";
+import Button from "../Button";
+import Container from "../Container";
 import Heading from "../Heading";
 import Text from "../Text";
 import Bota from "./Assets/bota.png";
@@ -12,186 +15,188 @@ import Sapato from "./Assets/sapato.png";
 import styles from "./styles.module.scss";
 
 // Import Swiper styles
-import { Box } from "@mui/system";
 import "swiper/css";
 import "swiper/css/navigation";
-import Button from "../Button";
 
 export default function SlideItens() {
   return (
     <Box className={styles.container}>
-      <Heading fontWeight={900} fontSize={20}>Mais Vendidos</Heading>
-      <Box className={styles.titleWrapper}></Box>
+      <Container>
+        <Heading fontWeight={900} fontSize={20}>
+          Mais Vendidos
+        </Heading>
+        <Box className={styles.titleWrapper}></Box>
 
-      <Swiper
-        // install Swiper modules
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={50}
-        slidesPerView={4}
-        navigation
-        pagination={{ clickable: true }}
-        className={styles.slides}
-      >
-        <SwiperSlide>
-          <Box className={styles.itensWrapper}>
-            <img src={Sapato} alt="" />
+        <Swiper
+          // install Swiper modules
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          slidesPerView={4}
+          navigation
+          pagination={{ clickable: true }}
+          className={styles.slides}
+        >
+          <SwiperSlide>
+            <Box className={styles.itensWrapper}>
+              <img src={Sapato} alt="" />
 
-            <Box className={styles.itemInfo}>
-              <Text color="#7A7A7A" fontSize={12} textTransform="uppercase">
-                Sapato floater pretos
-              </Text>
+              <Box className={styles.itemInfo}>
+                <Text color="#7A7A7A" fontSize={12} textTransform="uppercase">
+                  Sapato floater pretos
+                </Text>
 
-              <img src={Rating} alt="" />
+                <img src={Rating} alt="" />
 
-              <Heading fontSize={18}>por R$ 259,90</Heading>
-              <Text color="#7A7A7A" fontSize={11}>
-                ou em 9x de R$ 28,87
-              </Text>
-              <Button backgroundColor="#000000">Comprar</Button>
+                <Heading fontSize={18}>por R$ 259,90</Heading>
+                <Text color="#7A7A7A" fontSize={11}>
+                  ou em 9x de R$ 28,87
+                </Text>
+                <Button backgroundColor="#000000">Comprar</Button>
+              </Box>
             </Box>
-          </Box>
-        </SwiperSlide>
+          </SwiperSlide>
 
-        <SwiperSlide>
-          <Box className={styles.itensWrapper}>
-            <img src={Chinelo} alt="" />
+          <SwiperSlide>
+            <Box className={styles.itensWrapper}>
+              <img src={Chinelo} alt="" />
 
-            <Box className={styles.itemInfo}>
-              <Text color="#7A7A7A" fontSize={12} textTransform="uppercase">
-                Sapato floater pretos
-              </Text>
+              <Box className={styles.itemInfo}>
+                <Text color="#7A7A7A" fontSize={12} textTransform="uppercase">
+                  Sapato floater pretos
+                </Text>
 
-              <img src={Rating} alt="" />
+                <img src={Rating} alt="" />
 
-              <Heading fontSize={18}>por R$ 259,90</Heading>
-              <Text color="#7A7A7A" fontSize={11}>
-                ou em 9x de R$ 28,87
-              </Text>
-              <Button backgroundColor="#000000">Comprar</Button>
+                <Heading fontSize={18}>por R$ 259,90</Heading>
+                <Text color="#7A7A7A" fontSize={11}>
+                  ou em 9x de R$ 28,87
+                </Text>
+                <Button backgroundColor="#000000">Comprar</Button>
+              </Box>
             </Box>
-          </Box>
-        </SwiperSlide>
+          </SwiperSlide>
 
-        <SwiperSlide>
-          <Box className={styles.itensWrapper}>
-            <img src={Bota} alt="" />
+          <SwiperSlide>
+            <Box className={styles.itensWrapper}>
+              <img src={Bota} alt="" />
 
-            <Box className={styles.itemInfo}>
-              <Text color="#7A7A7A" fontSize={12} textTransform="uppercase">
-                Sapato floater pretos
-              </Text>
+              <Box className={styles.itemInfo}>
+                <Text color="#7A7A7A" fontSize={12} textTransform="uppercase">
+                  Sapato floater pretos
+                </Text>
 
-              <img src={Rating} alt="" />
+                <img src={Rating} alt="" />
 
-              <Heading fontSize={18}>por R$ 259,90</Heading>
-              <Text color="#7A7A7A" fontSize={11}>
-                ou em 9x de R$ 28,87
-              </Text>
-              <Button backgroundColor="#000000">Comprar</Button>
+                <Heading fontSize={18}>por R$ 259,90</Heading>
+                <Text color="#7A7A7A" fontSize={11}>
+                  ou em 9x de R$ 28,87
+                </Text>
+                <Button backgroundColor="#000000">Comprar</Button>
+              </Box>
             </Box>
-          </Box>
-        </SwiperSlide>
+          </SwiperSlide>
 
-        <SwiperSlide>
-          <Box className={styles.itensWrapper}>
-            <img src={Cinto} alt="" />
+          <SwiperSlide>
+            <Box className={styles.itensWrapper}>
+              <img src={Cinto} alt="" />
 
-            <Box className={styles.itemInfo}>
-              <Text color="#7A7A7A" fontSize={12} textTransform="uppercase">
-                Sapato floater pretos
-              </Text>
+              <Box className={styles.itemInfo}>
+                <Text color="#7A7A7A" fontSize={12} textTransform="uppercase">
+                  Sapato floater pretos
+                </Text>
 
-              <img src={Rating} alt="" />
+                <img src={Rating} alt="" />
 
-              <Heading fontSize={18}>por R$ 259,90</Heading>
-              <Text color="#7A7A7A" fontSize={11}>
-                ou em 9x de R$ 28,87
-              </Text>
-              <Button backgroundColor="#000000">Comprar</Button>
+                <Heading fontSize={18}>por R$ 259,90</Heading>
+                <Text color="#7A7A7A" fontSize={11}>
+                  ou em 9x de R$ 28,87
+                </Text>
+                <Button backgroundColor="#000000">Comprar</Button>
+              </Box>
             </Box>
-          </Box>
-        </SwiperSlide>
+          </SwiperSlide>
 
-        <SwiperSlide>
-          <Box className={styles.itensWrapper}>
-            <img src={Sapato} alt="" />
+          <SwiperSlide>
+            <Box className={styles.itensWrapper}>
+              <img src={Sapato} alt="" />
 
-            <Box className={styles.itemInfo}>
-              <Text color="#7A7A7A" fontSize={12} textTransform="uppercase">
-                Sapato floater pretos
-              </Text>
+              <Box className={styles.itemInfo}>
+                <Text color="#7A7A7A" fontSize={12} textTransform="uppercase">
+                  Sapato floater pretos
+                </Text>
 
-              <img src={Rating} alt="" />
+                <img src={Rating} alt="" />
 
-              <Heading fontSize={18}>por R$ 259,90</Heading>
-              <Text color="#7A7A7A" fontSize={11}>
-                ou em 9x de R$ 28,87
-              </Text>
-              <Button backgroundColor="#000000">Comprar</Button>
+                <Heading fontSize={18}>por R$ 259,90</Heading>
+                <Text color="#7A7A7A" fontSize={11}>
+                  ou em 9x de R$ 28,87
+                </Text>
+                <Button backgroundColor="#000000">Comprar</Button>
+              </Box>
             </Box>
-          </Box>
-        </SwiperSlide>
+          </SwiperSlide>
 
-        <SwiperSlide>
-          <Box className={styles.itensWrapper}>
-            <img src={Chinelo} alt="" />
+          <SwiperSlide>
+            <Box className={styles.itensWrapper}>
+              <img src={Chinelo} alt="" />
 
-            <Box className={styles.itemInfo}>
-              <Text color="#7A7A7A" fontSize={12} textTransform="uppercase">
-                Sapato floater pretos
-              </Text>
+              <Box className={styles.itemInfo}>
+                <Text color="#7A7A7A" fontSize={12} textTransform="uppercase">
+                  Sapato floater pretos
+                </Text>
 
-              <img src={Rating} alt="" />
+                <img src={Rating} alt="" />
 
-              <Heading fontSize={18}>por R$ 259,90</Heading>
-              <Text color="#7A7A7A" fontSize={11}>
-                ou em 9x de R$ 28,87
-              </Text>
-              <Button backgroundColor="#000000">Comprar</Button>
+                <Heading fontSize={18}>por R$ 259,90</Heading>
+                <Text color="#7A7A7A" fontSize={11}>
+                  ou em 9x de R$ 28,87
+                </Text>
+                <Button backgroundColor="#000000">Comprar</Button>
+              </Box>
             </Box>
-          </Box>
-        </SwiperSlide>
+          </SwiperSlide>
 
-        <SwiperSlide>
-          <Box className={styles.itensWrapper}>
-            <img src={Bota} alt="" />
+          <SwiperSlide>
+            <Box className={styles.itensWrapper}>
+              <img src={Bota} alt="" />
 
-            <Box className={styles.itemInfo}>
-              <Text color="#7A7A7A" fontSize={12} textTransform="uppercase">
-                Sapato floater pretos
-              </Text>
+              <Box className={styles.itemInfo}>
+                <Text color="#7A7A7A" fontSize={12} textTransform="uppercase">
+                  Sapato floater pretos
+                </Text>
 
-              <img src={Rating} alt="" />
+                <img src={Rating} alt="" />
 
-              <Heading fontSize={18}>por R$ 259,90</Heading>
-              <Text color="#7A7A7A" fontSize={11}>
-                ou em 9x de R$ 28,87
-              </Text>
-              <Button backgroundColor="#000000">Comprar</Button>
+                <Heading fontSize={18}>por R$ 259,90</Heading>
+                <Text color="#7A7A7A" fontSize={11}>
+                  ou em 9x de R$ 28,87
+                </Text>
+                <Button backgroundColor="#000000">Comprar</Button>
+              </Box>
             </Box>
-          </Box>
-        </SwiperSlide>
+          </SwiperSlide>
 
-        <SwiperSlide>
-          <Box className={styles.itensWrapper}>
-            <img src={Cinto} alt="" />
+          <SwiperSlide>
+            <Box className={styles.itensWrapper}>
+              <img src={Cinto} alt="" />
 
-            <Box className={styles.itemInfo}>
-              <Text color="#7A7A7A" fontSize={12} textTransform="uppercase">
-                Sapato floater pretos
-              </Text>
+              <Box className={styles.itemInfo}>
+                <Text color="#7A7A7A" fontSize={12} textTransform="uppercase">
+                  Sapato floater pretos
+                </Text>
 
-              <img src={Rating} alt="" />
+                <img src={Rating} alt="" />
 
-              <Heading fontSize={18}>por R$ 259,90</Heading>
-              <Text color="#7A7A7A" fontSize={11}>
-                ou em 9x de R$ 28,87
-              </Text>
-              <Button backgroundColor="#000000">Comprar</Button>
+                <Heading fontSize={18}>por R$ 259,90</Heading>
+                <Text color="#7A7A7A" fontSize={11}>
+                  ou em 9x de R$ 28,87
+                </Text>
+                <Button backgroundColor="#000000">Comprar</Button>
+              </Box>
             </Box>
-          </Box>
-        </SwiperSlide>
-      </Swiper>
+          </SwiperSlide>
+        </Swiper>
+      </Container>
     </Box>
   );
 }

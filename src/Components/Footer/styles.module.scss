@@ -1,0 +1,81 @@
+.container {
+    padding: 50px 0;
+    background-color: #000000;
+
+    .footerWrapper {
+        display: flex;
+        justify-content: space-between;
+
+        & > * {
+            flex: 1;
+        }
+
+        .titleBorder {
+            border-bottom: 5px solid #ffffff;
+            width: 45px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .addressWrapper {
+            > div {
+                margin-bottom: 10px;
+            }
+        }
+
+        .contactWrapper {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+
+            a {
+                color: #ffffff;
+
+                &:first-child {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        .contactsWrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            a {
+                width: 195px;
+                margin: 0 auto;
+
+                button {
+                    height: 40px;
+                    display: flex;
+                    padding: 0 15px;
+                    margin-bottom: 20px;
+                    border-radius: 5px;
+                    text-transform: uppercase;
+                    align-items: center;
+                    justify-content: center;
+                    line-height: 12px;
+
+                    svg {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+        .createWrapper {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            > div {
+                margin-left: 25px;
+            }
+
+            .corebizLogo {
+                width: 70px;
+            }
+        }
+    }
+}

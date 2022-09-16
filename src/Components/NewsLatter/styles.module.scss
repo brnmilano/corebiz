@@ -17,8 +17,10 @@
             width: 280px;
             height: 50px;
             margin: 0 20px;
+            padding: 0 20px;
             border: none;
             border-radius: 5px;
+            font-size: 12px;
 
             &:first-child {
                 margin: 0;
@@ -27,7 +29,6 @@
             &::placeholder {
                 color: #585858;
                 font-weight: 700;
-                padding-left: 10px;
                 font-size: 12px;
             }
         }

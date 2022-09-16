@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 export default function Button({
   children,
   backgroundColor = "#FFFFFF",
-  color = "#FFFFFF",
+  color = "#000000",
   borderRadius,
   padding,
   fontSize,

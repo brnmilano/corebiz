@@ -8,7 +8,6 @@ export default function Text({
   alignItems,
   fontStyle = "normal",
   textDecoration = "none",
-  textTransform = "lowercase"
 }) {
   return (
     <div
@@ -20,7 +19,6 @@ export default function Text({
         alignItems,
         fontStyle,
         textDecoration,
-        textTransform,
       }}
     >
       {children}
