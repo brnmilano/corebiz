@@ -94,7 +94,7 @@ export default function NewsLatter() {
               value={user.email}
             />
 
-            <Button backgroundColor="#000000" fontWeight={700} type="submit">
+            <Button backgroundColor="#000000" color="#ffffff" fontWeight={700} type="submit">
               Eu quero!
             </Button>
           </form>

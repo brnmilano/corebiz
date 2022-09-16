@@ -51,7 +51,7 @@ export default function SlideItens() {
                 <Text color="#7A7A7A" fontSize={11}>
                   ou em 9x de R$ 28,87
                 </Text>
-                <Button backgroundColor="#000000">Comprar</Button>
+                <Button backgroundColor="#000000" color="#ffffff">Comprar</Button>
               </Box>
             </Box>
           </SwiperSlide>
@@ -71,7 +71,7 @@ export default function SlideItens() {
                 <Text color="#7A7A7A" fontSize={11}>
                   ou em 9x de R$ 28,87
                 </Text>
-                <Button backgroundColor="#000000">Comprar</Button>
+                <Button backgroundColor="#000000" color="#ffffff">Comprar</Button>
               </Box>
             </Box>
           </SwiperSlide>
@@ -91,7 +91,7 @@ export default function SlideItens() {
                 <Text color="#7A7A7A" fontSize={11}>
                   ou em 9x de R$ 28,87
                 </Text>
-                <Button backgroundColor="#000000">Comprar</Button>
+                <Button backgroundColor="#000000" color="#ffffff">Comprar</Button>
               </Box>
             </Box>
           </SwiperSlide>
@@ -111,7 +111,7 @@ export default function SlideItens() {
                 <Text color="#7A7A7A" fontSize={11}>
                   ou em 9x de R$ 28,87
                 </Text>
-                <Button backgroundColor="#000000">Comprar</Button>
+                <Button backgroundColor="#000000" color="#ffffff">Comprar</Button>
               </Box>
             </Box>
           </SwiperSlide>
@@ -131,7 +131,7 @@ export default function SlideItens() {
                 <Text color="#7A7A7A" fontSize={11}>
                   ou em 9x de R$ 28,87
                 </Text>
-                <Button backgroundColor="#000000">Comprar</Button>
+                <Button backgroundColor="#000000" color="#ffffff">Comprar</Button>
               </Box>
             </Box>
           </SwiperSlide>
@@ -151,7 +151,7 @@ export default function SlideItens() {
                 <Text color="#7A7A7A" fontSize={11}>
                   ou em 9x de R$ 28,87
                 </Text>
-                <Button backgroundColor="#000000">Comprar</Button>
+                <Button backgroundColor="#000000" color="#ffffff">Comprar</Button>
               </Box>
             </Box>
           </SwiperSlide>
@@ -171,7 +171,7 @@ export default function SlideItens() {
                 <Text color="#7A7A7A" fontSize={11}>
                   ou em 9x de R$ 28,87
                 </Text>
-                <Button backgroundColor="#000000">Comprar</Button>
+                <Button backgroundColor="#000000" color="#ffffff">Comprar</Button>
               </Box>
             </Box>
           </SwiperSlide>
@@ -191,7 +191,7 @@ export default function SlideItens() {
                 <Text color="#7A7A7A" fontSize={11}>
                   ou em 9x de R$ 28,87
                 </Text>
-                <Button backgroundColor="#000000">Comprar</Button>
+                <Button backgroundColor="#000000" color="#ffffff">Comprar</Button>
               </Box>
             </Box>
           </SwiperSlide>
