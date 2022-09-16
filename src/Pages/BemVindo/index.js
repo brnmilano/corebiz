@@ -4,7 +4,7 @@ import Button from "../../Components/Button";
 import Container from "../../Components/Container";
 import Heading from "../../Components/Heading";
 import useIsMobile from "../../helpers/useIsMobile";
-import Logo from "./Assets/logo.png";
+import Logo from "./Assets/logo-branco.png";
 import styles from "./styles.module.scss";
 
 export default function BemVindo() {
