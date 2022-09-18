@@ -1,11 +1,9 @@
 // import Swiper core and required modules
-import { useEffect, useState } from "react";
 import { Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Skeleton } from "@mui/material";
 import { Box } from "@mui/system";
-import axios from "axios";
 import useIsMobile from "../../helpers/useIsMobile";
 import Button from "../Button";
 import Container from "../Container";
@@ -16,26 +14,12 @@ import styles from "./styles.module.scss";
 // Import Swiper styles
 import "swiper/scss";
 import "swiper/scss/navigation";
+import useAuth from "../../Contexts/Auth/useAuth";
 
 export default function SlideItens() {
   const isMobile = useIsMobile({ size: 768 });
 
-  const [isLoading, setIsLoading] = useState(true);
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  function fetchData() {
-    axios
-      .get("https://corebiz-test.herokuapp.com/api/v1/products")
-      .then((response) => {
-        setData(response.data);
-        setIsLoading(false);
-      })
-      .catch((error) => {});
-  }
+  const { data, isLoading } = useAuth();
 
   const settings = {
     modules: [Autoplay, Navigation],
@@ -71,10 +55,11 @@ export default function SlideItens() {
   });
 
   const ratingFormatter = [
-    "./Assets/rating1.png",
-    "./Assets/rating2.png",
-    "./Assets/rating3.png",
-    "./Assets/rating4.png",
+    "images/rating1.png",
+    "images/rating2.png",
+    "images/rating3.png",
+    "images/rating4.png",
+    "images/rating5.png",
   ];
 
   function convertPrice(str) {
@@ -98,7 +83,7 @@ export default function SlideItens() {
         ) : (
           <Swiper {...settings}>
             {data.length > 0 &&
-              data.map((product) => {
+              data.map((product, index) => {
                 const listPrice = convertPrice(String(product.listPrice));
                 const price = convertPrice(String(product.price));
                 const installmentPrice = convertPrice(
@@ -106,7 +91,7 @@ export default function SlideItens() {
                 );
 
                 return (
-                  <SwiperSlide key={` ${product.productId} `}>
+                  <SwiperSlide key={` ${product.productId} ${index}`}>
                     <Box className={styles.itensWrapper}>
                       <img
                         className={styles.itensImage}
