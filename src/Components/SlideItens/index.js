@@ -2,8 +2,13 @@
 import { Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+// Import Swiper styles
+import "swiper/scss";
+import "swiper/scss/navigation";
+
 import { Skeleton } from "@mui/material";
 import { Box } from "@mui/system";
+import useProducts from "../../Contexts/Products/useProducts";
 import useIsMobile from "../../helpers/useIsMobile";
 import Button from "../Button";
 import Container from "../Container";
@@ -11,15 +16,10 @@ import Heading from "../Heading";
 import Text from "../Text";
 import styles from "./styles.module.scss";
 
-// Import Swiper styles
-import "swiper/scss";
-import "swiper/scss/navigation";
-import useAuth from "../../Contexts/Auth/useAuth";
-
 export default function SlideItens() {
   const isMobile = useIsMobile({ size: 768 });
 
-  const { data, isLoading } = useAuth();
+  const { data, isLoading } = useProducts();
 
   const settings = {
     modules: [Autoplay, Navigation],

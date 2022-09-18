@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import AuthProvider from "./Contexts/Auth/AuthProvider";
+import ProductsProvider from "./Contexts/Products/ProductsProvider";
 import BemVindo from "./Pages/BemVindo";
 import Espera from "./Pages/Espera";
 import Home from "./Pages/Home";
 
 function App() {
   return (
-    <AuthProvider>
+    <ProductsProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/" index element={<BemVindo />} />
@@ -15,7 +15,7 @@ function App() {
           <Route path="/espera" element={<Espera />} />
         </Routes>
       </BrowserRouter>
-    </AuthProvider>
+    </ProductsProvider>
   );
 }
 

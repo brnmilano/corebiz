@@ -1,12 +1,12 @@
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 
-export const AuthContext = createContext({
+export const ProductContext = createContext({
   data: [],
   isLoading: false,
 });
 
-export default function AuthProvider({ children }) {
+export default function ProductsProvider({ children }) {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState([]);
 
@@ -25,8 +25,8 @@ export default function AuthProvider({ children }) {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ data, isLoading }}>
+    <ProductContext.Provider value={{ data, isLoading }}>
       {children}
-    </AuthContext.Provider>
+    </ProductContext.Provider>
   );
 }
