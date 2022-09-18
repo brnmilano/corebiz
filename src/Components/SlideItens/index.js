@@ -21,6 +21,8 @@ export default function SlideItens() {
 
   const { data, isLoading } = useProducts();
 
+  console.log(data);
+
   const settings = {
     modules: [Autoplay, Navigation],
     navigation: true,
