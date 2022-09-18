@@ -3,6 +3,11 @@
     padding-bottom: 35px;
     background-color: #f2f2f2;
 
+    @media screen and (max-width: 768px) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
     .newsLatterWrapper {
         display: flex;
         flex-direction: column;
@@ -16,14 +21,13 @@
         input {
             width: 280px;
             height: 50px;
-            margin: 0 20px;
             padding: 0 20px;
             border: none;
             border-radius: 5px;
             font-size: 12px;
 
             &:first-child {
-                margin: 0;
+                margin-right: 10px;
             }
 
             &::placeholder {
@@ -33,7 +37,11 @@
             }
 
             @media screen and (max-width: 768px) {
-                margin: 0;
+                width: 100%;
+
+                &:first-child {
+                    margin-bottom: 10px;
+                }
             }
         }
 
@@ -41,6 +49,11 @@
             height: 50px;
             width: 140px;
             border-radius: 5px;
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                margin-top: 10px;
+            }
         }
 
         .sucess {

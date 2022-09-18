@@ -51,11 +51,11 @@ export default function SlideItens() {
     },
     breakpoints: {
       768: {
-        slidesPerView: 2,
+        slidesPerView: 3,
         spaceBetween: 20,
       },
-      992: {
-        slidesPerView: 3,
+      1000: {
+        slidesPerView: 4,
         spaceBetween: 50,
       },
       1200: {

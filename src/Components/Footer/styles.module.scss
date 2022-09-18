@@ -6,6 +6,10 @@
         display: flex;
         justify-content: space-between;
 
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+
         & > * {
             flex: 1;
         }
@@ -62,6 +66,10 @@
                     }
                 }
             }
+
+            @media screen and (max-width: 768px) {
+                margin-top: 30px;
+            }
         }
 
         .createWrapper {
@@ -75,6 +83,14 @@
 
             .corebizLogo {
                 width: 70px;
+            }
+
+            @media screen and (max-width: 768px) {
+                justify-content: space-around;
+
+                > div {
+                    margin-left: 0;
+                }
             }
         }
     }
