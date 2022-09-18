@@ -14,6 +14,10 @@
 
       input {
         min-width: 700px;
+
+        @media screen and (max-width: 1024px) {
+          min-width: 400px;
+        }
       }
     }
 
@@ -24,6 +28,7 @@
 
       button {
         display: flex;
+        align-items: center;
 
         .iconUser {
           margin-right: 5px;
@@ -34,6 +39,36 @@
           color: #000000;
         }
       }
+    }
+  }
+}
+
+.containerMobile {
+  padding: 20px;
+
+  .topWrapperMobile {
+    display: flex;
+    justify-content: space-between;
+
+    & > * {
+      flex: 1;
+    }
+  }
+
+  .cartWrapperMobile {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      padding: 0;
+    }
+  }
+
+  .inputWrapper {
+    width: 100%;
+
+    .searchIcon {
+      color: #000000;
     }
   }
 }
