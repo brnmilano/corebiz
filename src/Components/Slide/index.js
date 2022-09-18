@@ -1,27 +1,31 @@
 // import Swiper core and required modules
-import { A11y, Navigation, Pagination, Scrollbar } from "swiper";
+import { Autoplay, Pagination } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import imageSlide from "./Assets/slide.png";
-import styles from "./styles.module.scss";
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import "swiper/scss";
+import "swiper/scss/navigation";
+import "swiper/scss/pagination";
 
 export default function Slide() {
+  const settings = {
+    modules: [Pagination, Autoplay],
+    pagination: { clickable: true },
+    watchOverflow: true,
+    spaceBetween: 20,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: true,
+      pauseOnMouseEnter: true,
+    },
+  };
+
   return (
-    <Swiper
-      // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={50}
-      slidesPerView={1}
-      navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      className={styles.slides}
-    >
+    <Swiper {...settings}>
       <SwiperSlide>
         <img src={imageSlide} alt="" />
       </SwiperSlide>
@@ -33,7 +37,7 @@ export default function Slide() {
       <SwiperSlide>
         <img src={imageSlide} alt="" />
       </SwiperSlide>
-      
+
       <SwiperSlide>
         <img src={imageSlide} alt="" />
       </SwiperSlide>
