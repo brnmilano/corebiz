@@ -1,4 +1,5 @@
 import { Box } from "@mui/system";
+import axios from "axios";
 import React, { useState } from "react";
 import * as yup from "yup";
 import Button from "../Button";
@@ -44,6 +45,17 @@ export default function NewsLatter() {
         mensagem: "Usuário não cadastrado com sucesso!",
       });
     }
+
+    axios
+      .post("https://corebiz-test.herokuapp.com/api/v1/newsletter", {
+        "email": user.email,
+        "name": user.name,
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {console.log(error);});
+      
   };
 
   async function validate() {
@@ -94,7 +106,12 @@ export default function NewsLatter() {
               value={user.email}
             />
 
-            <Button backgroundColor="#000000" color="#ffffff" fontWeight={700} type="submit">
+            <Button
+              backgroundColor="#000000"
+              color="#ffffff"
+              fontWeight={700}
+              type="submit"
+            >
               Eu quero!
             </Button>
           </form>
