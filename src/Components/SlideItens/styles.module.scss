@@ -1,9 +1,10 @@
 .container {
     padding-top: 25px;
     padding-bottom: 60px;
+    height: 500px;
 
     .titleWrapper {
-        border-bottom: 5px solid #C0C0C0;
+        border-bottom: 5px solid #c0c0c0;
         width: 65px;
         margin-bottom: 20px;
     }
@@ -15,15 +16,57 @@
     }
 
     .itensWrapper {
+        .itensImage {
+            width: 100%;
+        }
+
         .itemInfo {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-color: #e6e8ea;
-            padding: 10px 30px;
+            padding: 10px 25px;
             text-align: center;
-            max-width: 216px;
+
+            .imageRating {
+                margin: 5px 0;
+            }
+
+            h1 {
+                margin: 4px 0;
+            }
+
+            button {
+                display: none;
+
+                @media screen and (max-width: 768px) {
+                    display: block;
+                    border-radius: 5px;
+                    padding: 7px;
+                    margin-top: 10px;
+                    max-width: 150px;
+                }
+            }
+
+            &:hover {
+                background-color: #e6e8ea;
+
+                button {
+                    display: block;
+                    border-radius: 5px;
+                    padding: 7px;
+                    margin-top: 10px;
+                    max-width: 150px;
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                padding: 10px 0;
+
+                &:hover {
+                    background-color: transparent;
+                }
+            }
         }
     }
 }
