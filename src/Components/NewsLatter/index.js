@@ -7,7 +7,7 @@ import Container from "../Container";
 import Heading from "../Heading";
 import styles from "./styles.module.scss";
 
-export default function NewsLatter() {
+export default function NewsLetter() {
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -48,14 +48,11 @@ export default function NewsLatter() {
 
     axios
       .post("https://corebiz-test.herokuapp.com/api/v1/newsletter", {
-        "email": user.email,
-        "name": user.name,
+        email: user.email,
+        name: user.name,
       })
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {console.log(error);});
-      
+      .then((response) => {})
+      .catch((error) => {});
   };
 
   async function validate() {
@@ -84,7 +81,7 @@ export default function NewsLatter() {
   return (
     <Box className={styles.container}>
       <Container>
-        <Box className={styles.newsLatterWrapper}>
+        <Box className={styles.newsLetterWrapper}>
           <Heading color="#333333" fontSize={22} fontWeight={700}>
             Participe de nossas news com promoções e novidades!
           </Heading>
