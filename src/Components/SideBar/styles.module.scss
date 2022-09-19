@@ -1,12 +1,19 @@
+.listItem {
+    a {
+        width: 100%;
+    }
+}
+
 .iconUser {
     color: #000000;
 }
 
-.buttonBase {
-    padding: 0 !important;
-    min-width: unset !important;
-}
+.container {
+    .button {
+        margin-top: 10px;
+    }
 
-.menuIcon {
-    color: #000000;
+    .menuIcon {
+        color: #000000;
+    }
 }
