@@ -39,7 +39,7 @@ export default function SlideItens() {
       pauseOnMouseEnter: true,
     },
     breakpoints: {
-      768: {
+      580: {
         slidesPerView: 3,
         spaceBetween: 20,
       },
@@ -82,9 +82,25 @@ export default function SlideItens() {
         <Box className={styles.titleWrapper}></Box>
 
         {isLoading ? (
-          <>
-            <Skeleton variant="text" width={216} height={353} />
-          </>
+          <Box className={styles.skeletonWrapper}>
+            <Box className={styles.skeletonWrapperDesktop}>
+              <Skeleton variant="text" width={216} height={420} />
+              <Skeleton variant="text" width={216} height={420} />
+              <Skeleton variant="text" width={216} height={420} />
+              <Skeleton variant="text" width={216} height={420} />
+            </Box>
+
+            <Box className={styles.skeletonWrapperTablet}>
+              <Skeleton variant="text" width={175} height={420} />
+              <Skeleton variant="text" width={175} height={420} />
+              <Skeleton variant="text" width={175} height={420} />
+            </Box>
+
+            <Box className={styles.skeletonWrapperMobile}>
+              <Skeleton variant="text" width={160} height={380} />
+              <Skeleton variant="text" width={160} height={380} />
+            </Box>
+          </Box>
         ) : (
           <Swiper {...settings}>
             {data.length > 0 &&
