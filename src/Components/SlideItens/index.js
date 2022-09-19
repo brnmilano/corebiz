@@ -155,8 +155,7 @@ export default function SlideItens() {
                         <div style={{ height: 20 }}>
                           {product.installments.length > 0 && (
                             <Text color="#7A7A7A" fontSize={11}>
-                              ou em {product.installments[0]?.quantity}x de
-                              {formatter.format(installmentPrice)}
+                              ou em {product.installments[0]?.quantity}x de {formatter.format(installmentPrice)}
                             </Text>
                           )}
                         </div>
