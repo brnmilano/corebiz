@@ -1,10 +1,11 @@
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
-import { InputAdornment, TextField } from "@mui/material";
+import { Badge, InputAdornment, TextField } from "@mui/material";
 import { Box } from "@mui/system";
 import { Link } from "react-router-dom";
 import Button from "../../Components/Button";
+import useCart from "../../Contexts/Cart/useCart";
 import useIsMobile from "../../helpers/useIsMobile";
 import Container from "../Container";
 import SideBar from "../SideBar";
@@ -12,6 +13,7 @@ import Logo from "./Assets/logo-escuro.png";
 import styles from "./styles.module.scss";
 
 export default function TopBar() {
+  const { cart } = useCart();
   const isMobile = useIsMobile({ size: 768 });
 
   return (
@@ -26,11 +28,12 @@ export default function TopBar() {
             </Box>
 
             <Box className={styles.cartWrapperMobile}>
-              <Link to="/home">
-                <Button type="text" color="#7A7A7A" fontWeight={400}>
-                  <ShoppingCartCheckoutIcon />
-                </Button>
-              </Link>
+              <ShoppingCartCheckoutIcon style={{ marginRight: 15 }} />
+              <Badge
+                badgeContent={cart.length}
+                color="primary"
+                classes={{ colorPrimary: styles.bagdeColor }}
+              />
             </Box>
           </Box>
 
@@ -83,11 +86,12 @@ export default function TopBar() {
                   </Button>
                 </Link>
 
-                <Link to="/home">
-                  <Button type="text" color="#7A7A7A" fontWeight={400}>
-                    <ShoppingCartCheckoutIcon />
-                  </Button>
-                </Link>
+                <ShoppingCartCheckoutIcon style={{ marginRight: 10 }} />
+                <Badge
+                  badgeContent={cart.length}
+                  color="primary"
+                  classes={{ colorPrimary: styles.bagdeColor }}
+                />
               </Box>
             </Box>
           </Container>

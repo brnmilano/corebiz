@@ -1,8 +1,10 @@
 import { useContext } from "react";
-import { AuthContext } from "./AuthProvider";
+import { CartContext } from "./CartProvider";
 
-export default function useAuth() {
-  const { dados, isLoading } = useContext(AuthContext);
+export default function useCart() {
+  // pega todo o context e só retorna
+  // esse useCart() é só pra ficar mais fácil importar
+  const cartContext = useContext(CartContext);
 
-  return { dados, isLoading };
+  return cartContext;
 }

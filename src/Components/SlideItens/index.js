@@ -8,18 +8,21 @@ import "swiper/scss/navigation";
 
 import { Skeleton } from "@mui/material";
 import { Box } from "@mui/system";
+import useCart from "../../Contexts/Cart/useCart";
 import useProducts from "../../Contexts/Products/useProducts";
 import useIsMobile from "../../helpers/useIsMobile";
 import Button from "../Button";
 import Container from "../Container";
 import Heading from "../Heading";
 import Text from "../Text";
+import offImage from "./Assets/off.png";
 import styles from "./styles.module.scss";
 
 export default function SlideItens() {
   const isMobile = useIsMobile({ size: 768 });
 
   const { data, isLoading } = useProducts();
+  const { addItem } = useCart();
 
   console.log(data);
 
@@ -95,6 +98,12 @@ export default function SlideItens() {
                 return (
                   <SwiperSlide key={` ${product.productId} ${index}`}>
                     <Box className={styles.itensWrapper}>
+                      {listPrice > null && (
+                        <div className={styles.offWrapper}>
+                          <img src={offImage} alt="" />
+                        </div>
+                      )}
+
                       <img
                         className={styles.itensImage}
                         src={product.imageUrl}
@@ -116,22 +125,31 @@ export default function SlideItens() {
                           alt="Rating"
                         />
 
-                        <Text color="#7A7A7A" fontSize={isMobile ? 11 : 12}>
-                          de {formatter.format(listPrice)}
-                        </Text>
+                        <div style={{ height: 20 }}>
+                          <Text color="#7A7A7A" fontSize={isMobile ? 11 : 12}>
+                            {listPrice > null &&
+                              `de ${formatter.format(listPrice)}`}
+                          </Text>
+                        </div>
 
                         <Heading fontWeight={700} fontSize={isMobile ? 16 : 18}>
                           por {formatter.format(price)}
                         </Heading>
 
-                        {product.installments.length > 0 && (
-                          <Text color="#7A7A7A" fontSize={11}>
-                            ou em {product.installments[0]?.quantity}x de
-                            {formatter.format(installmentPrice)}
-                          </Text>
-                        )}
+                        <div style={{ height: 20 }}>
+                          {product.installments.length > 0 && (
+                            <Text color="#7A7A7A" fontSize={11}>
+                              ou em {product.installments[0]?.quantity}x de
+                              {formatter.format(installmentPrice)}
+                            </Text>
+                          )}
+                        </div>
 
-                        <Button backgroundColor="#000000" color="#ffffff">
+                        <Button
+                          backgroundColor="#000000"
+                          color="#ffffff"
+                          onClick={() => addItem(product)}
+                        >
                           Comprar
                         </Button>
                       </Box>

@@ -16,6 +16,13 @@
     }
 
     .itensWrapper {
+        position: relative;
+
+        .offWrapper {
+            position: absolute;
+            right: 0;
+        }
+
         .itensImage {
             width: 100%;
         }
