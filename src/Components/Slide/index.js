@@ -29,44 +29,38 @@ export default function Slide() {
   };
 
   return (
-    <>
-      {isMobile ? (
-        <Swiper {...settings}>
-          <SwiperSlide>
-            <img style={{ width: "100%" }} src={imageSlideMobile} alt="" />
-          </SwiperSlide>
+    <Swiper {...settings}>
+      <SwiperSlide>
+        <img
+          style={{ width: isMobile && "100%" }}
+          src={isMobile ? imageSlideMobile : imageSlide}
+          alt=""
+        />
+      </SwiperSlide>
 
-          <SwiperSlide>
-            <img style={{ width: "100%" }} src={imageSlideMobile} alt="" />
-          </SwiperSlide>
+      <SwiperSlide>
+        <img
+          style={{ width: isMobile && "100%" }}
+          src={isMobile ? imageSlideMobile : imageSlide}
+          alt=""
+        />
+      </SwiperSlide>
 
-          <SwiperSlide>
-            <img style={{ width: "100%" }} src={imageSlideMobile} alt="" />
-          </SwiperSlide>
+      <SwiperSlide>
+        <img
+          style={{ width: isMobile && "100%" }}
+          src={isMobile ? imageSlideMobile : imageSlide}
+          alt=""
+        />
+      </SwiperSlide>
 
-          <SwiperSlide>
-            <img style={{ width: "100%" }} src={imageSlideMobile} alt="" />
-          </SwiperSlide>
-        </Swiper>
-      ) : (
-        <Swiper {...settings}>
-          <SwiperSlide>
-            <img src={imageSlide} alt="" />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <img src={imageSlide} alt="" />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <img src={imageSlide} alt="" />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <img src={imageSlide} alt="" />
-          </SwiperSlide>
-        </Swiper>
-      )}
-    </>
+      <SwiperSlide>
+        <img
+          style={{ width: isMobile && "100%" }}
+          src={isMobile ? imageSlideMobile : imageSlide}
+          alt=""
+        />
+      </SwiperSlide>
+    </Swiper>
   );
 }
