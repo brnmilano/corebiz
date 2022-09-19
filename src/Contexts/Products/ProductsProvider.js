@@ -10,18 +10,21 @@ export default function ProductsProvider({ children }) {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState([]);
 
-  function fetchData() {
-    axios
-      .get("https://corebiz-test.herokuapp.com/api/v1/products")
-      .then((response) => {
-        setData(response.data);
-        setIsLoading(false);
-      })
-      .catch((error) => {});
-  }
-
   useEffect(() => {
-    fetchData();
+    setTimeout(() => {
+      function fetchData() {
+        axios
+          .get("https://corebiz-test.herokuapp.com/api/v1/products")
+          .then((response) => {
+            setData(response.data);
+            setIsLoading(false);
+          })
+          .catch((error) => {});
+      }
+
+      fetchData();
+      setIsLoading(false);
+    }, 2000);
   }, []);
 
   return (
